@@ -161,36 +161,6 @@ export class Create extends ModalAction {
         required: false,
       },
       {
-        name: 'hints',
-        label: t('Availability Zone Hints'),
-        type: 'select-table',
-        data: this.aZones,
-        isLoading: globalNeutronStore.zoneLoading,
-        isMulti: true,
-        filterParams: [
-          {
-            label: t('Name'),
-            name: 'name',
-          },
-        ],
-        columns: [
-          {
-            title: t('Name'),
-            dataIndex: 'name',
-          },
-          {
-            title: t('State'),
-            dataIndex: 'state',
-            valueMap: availabilityZoneState,
-          },
-          {
-            title: t('Resource Type'),
-            dataIndex: 'resource',
-            valueMap: availabilityZoneResource,
-          },
-        ],
-      },
-      {
         name: 'openExternalNetwork',
         label: t('Options'),
         type: 'check',
